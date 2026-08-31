@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+#root {
+  height: 100vh;
+  --background-primary: #FBF6ED;
+  --background-secondary: #EAC3C0;
+  --background-tetriary: "";
+  --color-primary: "";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@theme {
+  --font-sans: var(--font-alice), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+@theme {
+  --color-shadow-yellow: #A48161;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
+.slick-slide>div {
+  width: 100%;
+  display: flex !important;
+}
