@@ -6,9 +6,9 @@ const Header = () => {
     <header className="bg-[url(assets/hero.png)] bg-cover h-full bg-center flex flex-col">
       <Navigation />
       <div className="text-white text-center lg:p-75 text-shadow-shadow-yellow text-shadow-md px-7.5 py-50">
-        <h1 className="items-center lg:text-7xl text-6xl">Clara Swahn</h1>
+        <h1 className="items-center lg:text-7xl text-6xl font-alice">Clara Swahn</h1>
         <TypeAnimation
-          className="text-[#EAC3C0]"
+          className="text-[#EAC3C0] font-alice"
           sequence={[
             'Frontend Developer',
             1000,

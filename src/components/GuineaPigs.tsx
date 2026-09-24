@@ -1,7 +1,7 @@
 const GuineaPigs = () => {
   return (
     <div className="bg-[#EAC3C0] lg:py-30 lg:px-80 text-center gap-5 flex flex-col text-taupe-600 px-7.5 py-10">
-      <h3 className="text-3xl text-white drop-shadow-[0_2.2px_0.9px_rgb(164,129,97)]">My Guinea Pigs</h3>
+      <h3 className="text-3xl text-white drop-shadow-[0_2.2px_0.9px_rgb(164,129,97)] font-alice">My Guinea Pigs</h3>
       <p>You wanted to see and hear more about my guinea pigs? Of course, just look right below! &#10084;</p>
       <div className="flex gap-5 justify-evenly border border-[#FBF6ED] rounded-md p-5">
         <div>

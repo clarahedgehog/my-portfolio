@@ -1,4 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 @import "tailwindcss";
+
+.font-alice {
+  font-family: 'Alice', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 #root {
   height: 100vh;
@@ -13,10 +22,6 @@
 }
 
 @theme {
-  --font-sans: var(--font-alice), ui-sans-serif, system-ui, sans-serif !important;
-}
-
-@theme {
   --color-shadow-yellow: #A48161;
 }
 
@@ -25,11 +30,11 @@
 }
 
 .slick-slide {
-  height: auto !important;
+  height: inherit !important;
   display: flex !important;
 }
 
 .slick-slide>div {
-  width: 100%;
-  display: flex !important;
+  display: flex;
+  flex: 1;
 }

@@ -10,7 +10,6 @@ interface Repository {
   html_url: string;
   homepage: string | null;
   language: string | null;
-  stargazers_count: number;
   fork: boolean;
   topics: string[];
 }
@@ -73,7 +72,7 @@ export default function GithubProjectsMobile() {
 
   return (
     <div className="w-full lg:px-8 lg:py-30 bg-[#A3B1C7] lg:hidden px-7.5 py-10 pb-15">
-      <h2 className="text-white text-3xl drop-shadow-[0_2.2px_0.9px_rgb(164,129,97)] mb-8 text-center">My Projects</h2>
+      <h2 className="text-white text-3xl drop-shadow-[0_2.2px_0.9px_rgb(164,129,97)] mb-8 text-center font-alice">My Projects</h2>
       <div className="px-4 h-full">
         <SafeSlider {...settings}>
           {repos.map((repo) => {
@@ -95,7 +94,7 @@ export default function GithubProjectsMobile() {
                     />
                   </a>
                   <div className="p-6 flex flex-col grow">
-                    <h3 className="text-xl font-semibold mb-2">
+                    <h3 className="text-xl font-semibold mb-2 font-alice">
                       <a
                         href={repo.html_url}
                         target="_blank"
@@ -105,6 +104,7 @@ export default function GithubProjectsMobile() {
                         {repo.name}
                       </a>
                     </h3>
+                    <p className='text-sm text-taupe-600 font-medium my-4 grow'>{repo.description || 'No description provided.'}</p>
                     {repo.homepage && (
                       <a
                         href={repo.homepage}

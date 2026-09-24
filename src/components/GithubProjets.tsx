@@ -10,7 +10,6 @@ interface Repository {
   html_url: string;
   homepage: string | null;
   language: string | null;
-  stargazers_count: number;
   fork: boolean;
   topics: string[];
 }
@@ -76,8 +75,8 @@ export default function GithubProjects() {
   const SafeSlider = (Slider as any).default || Slider;
 
   return (
-    <div className="w-full lg:px-8 lg:py-30 bg-[#A3B1C7] hidden lg:block">
-      <h2 className="text-white text-3xl drop-shadow-[0_2.2px_0.9px_rgb(164,129,97)] mb-8 text-center">My Projects</h2>
+    <div id="projects" className="w-full lg:px-8 lg:py-30 bg-[#A3B1C7] hidden lg:block">
+      <h2 className="text-white text-3xl drop-shadow-[0_2.2px_0.9px_rgb(164,129,97)] mb-8 text-center font-alice">My Projects</h2>
       <div className="px-4 h-full">
         <SafeSlider {...settings}>
           {repos.map((repo) => {
@@ -89,7 +88,7 @@ export default function GithubProjects() {
 
             return (
               <div key={repo.id} className="px-3 pb-8 w-full flex flex-col h-full">
-                <div className="flex flex-col bg-[#FBF6ED] border border-[#FBF6ED] rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:scale-97 transition-transform">
+                <div className="flex h-full flex-col bg-[#FBF6ED] border border-[#FBF6ED] rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:scale-97 transition-transform">
                   <a href={targetUrl} target="_blank" rel="noopener noreferrer" className="block overflow-hidden bg-[#FBF6ED] aspect-auto border-b border-[#FBF6ED]">
                     <img
                       src={imageUrl}
@@ -99,22 +98,23 @@ export default function GithubProjects() {
                     />
                   </a>
                   <div className="p-6 flex flex-col grow">
-                    <h3 className="text-xl font-semibold mb-2">
+                    <h3 className="text-xl font-semibold mb-2 h-full">
                       <a
                         href={repo.html_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-taupe-600"
+                        className="text-taupe-600 font-alice"
                       >
                         {repo.name}
                       </a>
+                      <p className='text-sm text-taupe-600 font-medium my-4 grow'>{repo.description || 'No description provided.'}</p>
                     </h3>
                     {repo.homepage && (
                       <a
                         href={repo.homepage}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block mb-4 text-sm font-medium text-taupe-600 hover:text-[#A3B1C7]"
+                        className="inline-block mb-4 text-sm font-medium hover:text-taupe-600 text-[#A3B1C7]"
                       >
                         Visit Live Site &rarr;
                       </a>
